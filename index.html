@@ -1,104 +1,434 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Minha Princesa Sophia</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6 meses de nós ❤️</title>
 
-        .card {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 50px 40px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-        }
+<style>
+* { box-sizing: border-box; }
 
-        h1 {
-            color: #e63946;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: linear-gradient(140deg, #260016, #650b35, #170014);
+  color: #fff0f5;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-        .subtitulo {
-            font-size: 1.2em;
-            color: #d62828;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+header {
+  padding: 65px 20px 35px;
+}
 
-        .coracao {
-            font-size: 45px;
-            margin: 15px 0;
-        }
+h1 {
+  color: #ffb6d5;
+  font-size: clamp(35px, 8vw, 60px);
+  text-shadow: 0 0 20px #ff4f93;
+}
 
-        .foto {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 18px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
+.subtitulo {
+  font-size: 19px;
+  line-height: 1.8;
+}
 
-        .texto {
-            line-height: 1.9;
-            font-size: 1.15em;
-            color: #444;
-            text-align: justify;
-            margin-top: 25px;
-        }
+button {
+  background: #ff4f93;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 12px;
+  box-shadow: 0 0 15px #ff4f9366;
+}
 
-        .texto p {
-            margin-bottom: 20px;
-        }
+button:hover {
+  background: #ff79ae;
+  transform: scale(1.04);
+}
 
-        .rodape {
-            margin-top: 35px;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #e63946;
-        }
-    </style>
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff12;
+  border: 1px solid #ffb6d544;
+  border-radius: 22px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 8px 30px #0003;
+  backdrop-filter: blur(8px);
+}
+
+h2 {
+  color: #ffb6d5;
+}
+
+.carta {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.95;
+  white-space: normal;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #ffb6d577;
+}
+
+.legenda {
+  font-size: 14px;
+  color: #ffd5e5;
+  margin-top: 8px;
+}
+
+.final {
+  color: #ffb6d5;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+.coracao {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: subir 7s linear forwards;
+  z-index: -1;
+}
+
+@keyframes subir {
+  from { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .8; }
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+footer {
+  padding: 30px 15px;
+  color: #ffc7dc;
+}
+
+@media (max-width: 480px) {
+  .galeria img { height: 175px; }
+  .card { padding: 19px; }
+  .carta { font-size: 17px; }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Feliz 6 Meses de Namoro!</h1>
-        <div class="subtitulo">Para a minha eterna princesa, Sophia 👑</div>
-        
-        <div class="coracao">❤️</div>
+<header>
+  <div style="font-size:45px">💗🌹💗</div>
+  <h1>6 meses de nós</h1>
+  <p class="subtitulo">
+    Para a menina que tornou meus dias mais especiais.<br>
+    Uma pequena surpresa para o meu amor.
+  </p>
+  <button onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">
+    Abrir minha carta ❤️
+  </button>
+</header>
 
-        <!-- Se você tiver uma foto, basta colocar o nome do arquivo abaixo em src="sua-foto.jpg" -->
-        <!-- <img src="sua-foto.jpg" alt="IMG_20261013_101308122_HDR.jpg" class="foto"> -->
+<main class="container">
 
-        <div class="texto">
-            <p>
-                Minha princesa Sophia,
-            </p>
+  <section class="card">
+    <h2>📸 Nosso pequeno universo</h2>
+    <p>Alguns dos meus momentos favoritos são aqueles em que você está comigo.</p>
 
-            <p>
-                Hoje a gente completa 6 meses juntos, e eu não poderia deixar essa data passar sem tentar te mostrar o quanto você é especial na minha vida. Eu te amo demais, com todo o meu coração, e cada segundo do seu lado me faz ter certeza de que você é a pessoa mais incrível que já conheci.
-            </p>
+    <div class="galeria">
 
-            <p>
-                Quero te pedir desculpas do fundo do meu coração por não ter conseguido te dar um presente físico hoje. Sei o quanto isso é importante, mas me dói não ter preparado algo do jeito que você realmente merece. Quero que saiba que isso jamais diminui o amor gigante que sinto por você, e prometo recompensar você muito em breve.
-            </p>
+      <!-- FOTO 1: coloque sua imagem na pasta fotos e chame de foto1.jpg -->
+      <div>
+        <img src="fotos/foto1.jpg" alt="Nossa primeira foto">
+        <p class="legenda">Um momento que guardo no coração ❤️</p>
+      </div>
 
-            <p>
-                Quero que você guarde uma coisa para sempre na sua cabeça e no seu coração: independentemente de qualquer dificuldade, problema ou momento difícil que a gente venha a enfrentar, eu sempre, sempre vou estar do seu lado. Você nunca estará sozinha. Quero construir algo lindo e duradouro com você,
-                
+      <!-- FOTO 2: coloque sua imagem na pasta fotos e chame de foto2.jpg -->
+      <div>
+        <img src="fotos/foto2.jpg" alt="Nós dois">
+        <p class="legenda">Eu e você, do nosso jeitinho 💗</p>
+      </div>
+
+      <!-- FOTO 3: coloque sua imagem na pasta fotos e chame de foto3.jpg -->
+      <div>
+        <img src="fotos/foto3.jpg" alt="Uma lembrança especial">
+        <p class="legenda">Mais uma lembrança nossa 🥹</p>
+      </div>
+
+      <!-- FOTO 4: coloque sua imagem na pasta fotos e chame de foto4.jpg -->
+      <div>
+        <img src="fotos/foto4.jpg" alt="Um dos nossos momentos">
+        <p class="legenda">Que venham muitos outros momentos 💞</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="card" id="carta">
+    <h2>💌 Uma carta do fundo do meu coração</h2>
+
+    <div class="carta">
+      <p>Meu amor, feliz 6 meses para nós! ❤️🥹</p>
+
+      <p>
+      Eu queria começar dizendo que talvez nem todas as palavras
+      do mundo fossem suficientes para explicar o quanto você
+      significa para mim. Mesmo assim, quero tentar, porque você
+      merece saber o tamanho do carinho que tenho por você e o
+      quanto esses seis meses representam na minha vida.
+      </p>
+
+      <p>
+      Hoje completamos seis meses de uma história que é nossa,
+      uma história construída com conversas, risadas, carinho,
+      saudade, momentos especiais e até dificuldades que nos
+      ensinaram coisas sobre nós mesmos. E, quando penso em tudo
+      isso, percebo que o mais bonito não é apenas o tempo que
+      passou, mas todas as lembranças que construímos durante ele.
+      </p>
+
+      <p>
+      Antes de você, eu não sabia exatamente como tantas pequenas
+      coisas poderiam ganhar um significado tão grande. Uma
+      mensagem sua pode melhorar meu dia, uma conversa pode fazer
+      o tempo passar voando e uma lembrança nossa pode me fazer
+      sorrir mesmo quando estou longe de você. É incrível como
+      alguém pode se tornar tão importante sem precisar fazer
+      nada extraordinário: às vezes, basta ser quem é.
+      </p>
+
+      <p>
+      E eu gosto de você por ser você. Pelos seus jeitos, pelas
+      suas manias, pelo seu sorriso, pela sua personalidade e por
+      todas aquelas pequenas coisas que talvez você nem perceba,
+      mas que fazem parte da pessoa por quem me apaixonei.
+      Não quero que você pense que precisa ser perfeita para ser
+      amada. Você pode ter dias bons e ruins, pode ficar triste,
+      pode errar, pode mudar de ideia e pode ter seus momentos
+      difíceis. Quero conhecer e respeitar a pessoa real que você
+      é, não uma versão perfeita que ninguém consegue ser.
+      </p>
+
+      <p>
+      Nesses seis meses, você se tornou uma parte muito especial
+      da minha história. Eu guardo com carinho as nossas conversas,
+      as brincadeiras, as demonstrações de amor e até as pequenas
+      coisas que podem parecer bobas para outras pessoas. Para
+      mim, são lembranças que têm valor porque foram vividas com
+      você.
+      </p>
+
+      <p>
+      Também sei que nem tudo é perfeito. Relacionamentos têm
+      diferenças, mal-entendidos e dias em que precisamos respirar
+      fundo, conversar e aprender a entender melhor o outro.
+      Eu não quero que a nossa história seja baseada na ideia de
+      que nunca vamos errar, mas na vontade de aprender, conversar
+      com sinceridade, respeitar nossos sentimentos e cuidar um
+      do outro. Quero que a gente tenha liberdade para falar
+      sobre o que incomoda, sem medo de ser ouvido.
+      </p>
+
+      <p>
+      E, meu amor, preciso te pedir desculpas por uma coisa:
+      sinto muito por não ter conseguido te dar um presente
+      físico nesses seis meses. Eu queria poder te entregar algo
+      especial, ver sua reação e guardar esse momento com você.
+      Se eu pudesse, gostaria de preparar tudo do jeitinho que
+      você merece.
+      </p>
+
+      <p>
+      Talvez esse presente não seja uma caixa com laço, flores
+      entregues na sua mão ou alguma coisa que você possa segurar.
+      É um pedacinho do meu tempo, da minha dedicação e dos meus
+      sentimentos colocado aqui para você. Fiz isso pensando em
+      você, imaginando você lendo cada palavra e querendo que
+      sentisse o quanto é importante para mim.
+      </p>
+
+      <p>
+      E o presente físico? Quero tentar te entregar depois,
+      mesmo que chegue atrasado. Não quero te prometer algo que
+      dependa de condições que nem sempre controlo, mas quero
+      que saiba que não deixei de me importar com essa data.
+      A intenção de fazer algo especial por você continua aqui.
+      Espero que, quando esse momento chegar, a gente possa
+      transformar a espera em mais uma lembrança bonita.
+      </p>
+
+      <p>
+      Eu também quero que você saiba de uma coisa muito
+      importante: quero estar ao seu lado não somente quando
+      tudo estiver bem, quando estivermos felizes e quando
+      estivermos rindo de qualquer besteira. Quero também poder
+      te ouvir quando o dia for difícil, respeitar seu silêncio
+      quando precisar de um tempo, te acolher quando estiver
+      triste e conversar com você quando as coisas parecerem
+      complicadas.
+      </p>
+
+      <p>
+      Não posso prometer que terei todas as respostas ou que
+      conseguirei resolver todos os problemas. Sou humano,
+      também tenho minhas limitações e ainda tenho muito a
+      aprender. Mas posso procurar te ouvir com carinho, levar
+      seus sentimentos a sério e fazer o meu melhor para que
+      você nunca sinta que precisa fingir estar bem comigo.
+      Você merece ser ouvida, respeitada e tratada com amor.
+      </p>
+
+      <p>
+      E tem uma coisa que preciso te dizer com todo o carinho
+      do mundo: lembra daquilo que você me falou? Eu fiquei
+      preocupado com você. Por favor, não faça aquilo que
+      você me disse que estava pensando em fazer. Não quero
+      que você se machuque nem que enfrente essa dor sozinha.
+      Sua vida e seu bem-estar importam muito, independentemente
+      de qualquer problema que esteja acontecendo agora.
+      </p>
+
+      <p>
+      Se as coisas estiverem pesadas demais, conversa comigo,
+      com alguém da sua família ou com uma pessoa adulta em
+      quem você confie. Você não precisa encontrar todas as
+      respostas hoje, nem resolver tudo de uma vez. Podemos
+      conversar sobre o que está acontecendo e procurar ajuda
+      juntos. Eu quero que você fique bem de verdade, não
+      apenas que diga que está bem para me tranquilizar.
+      </p>
+
+      <p>
+      Quero que você saiba também que não precisa carregar
+      tudo sozinha para provar que é forte. Pedir ajuda não
+      diminui ninguém. Você merece cuidado, apoio e pessoas
+      que possam estar perto de você quando precisar.
+      </p>
+
+      <p>
+      Meu amor, se existe algo que desejo para os nossos
+      próximos meses, é que a gente continue crescendo,
+      aprendendo a conversar melhor, criando lembranças e
+      descobrindo novas formas de demonstrar carinho. Quero
+      comemorar suas conquistas, conhecer seus sonhos, ouvir
+      suas histórias e participar dos momentos que você
+      quiser compartilhar comigo.
+      </p>
+
+      <p>
+      Quero que tenhamos muitas fotos novas para colocar
+      neste site, muitas datas para comemorar e muitas
+      lembranças para olhar no futuro e dizer: "Olha tudo
+      o que a gente viveu!". Não sei exatamente como será
+      cada capítulo da nossa história, mas sei que quero
+      tratar o nosso presente com cuidado e sinceridade.
+      </p>
+
+      <p>
+      Obrigado por esses seis meses, pelas lembranças, pelo
+      carinho e por fazer parte da minha vida. Obrigado por
+      cada conversa que me fez sorrir, por cada momento que
+      se tornou especial e por todas as vezes em que pudemos
+      compartilhar um pouquinho do nosso mundo.
+      </p>
+
+      <p>
+      Se eu pudesse te entregar uma coisa junto desta carta,
+      seria a certeza de que você não precisa ser perfeita
+      para ter valor. Você é uma pessoa com sentimentos,
+      sonhos, qualidades e dificuldades, e merece carinho
+      em todos esses momentos. Nunca se esqueça de cuidar
+      de você também.
+      </p>
+
+      <p>
+      Feliz seis meses para nós, minha menina. ❤️
+      Que este seja mais um capítulo cheio de carinho,
+      respeito, sinceridade e momentos felizes. E que,
+      quando olharmos para trás, possamos sentir orgulho
+      da forma como aprendemos a cuidar um do outro.
+      </p>
+
+      <p>
+      Eu te amo muito, meu amor. Mais do que consigo
+      explicar nesta carta, mais do que cabe nesta tela
+      e mais do que qualquer presente conseguiria dizer.
+      Espero que você sinta, em cada palavra, o carinho
+      com que preparei este pequeno presente para você.
+      </p>
+
+      <p>
+      Com todo o meu amor,<br>
+      do seu namorado, que preparou cada detalhe
+      pensando em você. 💗
+      </p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>💖 Uma última coisinha...</h2>
+    <p class="final">
+      Seis meses de história.<br>
+      Milhares de sentimentos.<br>
+      Muitas lembranças guardadas.<br>
+      E ainda tantas coisas bonitas para viver.
+    </p>
+
+    <button onclick="mostrarSurpresa()">
+      Clica aqui, meu amor 🥹❤️
+    </button>
+
+    <p id="surpresa" style="display:none; line-height:1.9; font-size:20px;">
+      Se eu pudesse voltar ao dia em que tudo começou,
+      gostaria de reviver cada momento que me trouxe até aqui.
+      Obrigado por fazer parte da minha história.
+      Feliz 6 meses, meu amor! ❤️🌹
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  Feito com carinho, especialmente para você. ❤️<br>
+  6 meses de nós, e uma história que continua sendo escrita.
+</footer>
+
+<script>
+function mostrarSurpresa() {
+  document.getElementById("surpresa").style.display = "block";
+}
+
+function criarCoracao() {
+  const coracao = document.createElement("div");
+  coracao.className = "coracao";
+  coracao.textContent = ["❤️", "💗", "💕", "💖", "🌸"][
+    Math.floor(Math.random() * 5)
+  ];
+  coracao.style.left = Math.random() * 100 + "vw";
+  coracao.style.fontSize = (15 + Math.random() * 20) + "px";
+  coracao.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(coracao);
+
+  setTimeout(() => coracao.remove(), 10000);
+}
+
+setInterval(criarCoracao, 700);
+</script>
+
+</body>
+</html>
